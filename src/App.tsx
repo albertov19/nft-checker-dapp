@@ -48,7 +48,7 @@ function App() {
         web3 &&
           (await checkNFTOwnership(
             web3,
-            accounts[0] //"0x3e5e1a443feb2e5e7f611c4f2426c275811a46f5"
+            "0x44236223aB4291b93EEd10E4B511B37a398DEE55"
           ))
           ? true
           : false
@@ -117,12 +117,12 @@ function App() {
               For additional information on eligibility please see <a href="https://moonbeam.foundation/take-flight/#eligibility" target="_blank" rel="noopener">Take Flight eligibility</a>.
             </Card.Text>
             <Card.Text>
-              NB: You need to own the NFT by block: {BLOCK_NUMBER}
+              NB: You need to own the NFT before block {BLOCK_NUMBER} (Ethereum MainNet)
             </Card.Text>
 
             {connectionStatus === "Connected" && 
               <div>Account: {account} - <span style={hasNFT ? { color: "green" } : { color: "red" }}>
-                  {hasNFT ? "Owns a MOONBEAM NFT" : "No MOONBEAM NFT has been detected, you can’t continue"}
+                  {hasNFT ? "Owns a Moonbeam PolkaPet NFT" : "No Moonbeam PolkaPet NFT has been detected, you can’t continue with the following step."}
                 </span>
               </div>
             }
